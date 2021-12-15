@@ -3,51 +3,53 @@ part of 'sign_up_page.dart';
 extension SignUpChildren on SignUpPage {
   Widget signUpForm() {
     final controller = Get.put(SignUpController());
-    return Padding(
-      padding: const EdgeInsets.only(left: 16.0, top: 32.0, right: 16.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Text(
-            "Let's Go!",
-            style: TextStyle(
-                color: Colors.black,
-                fontSize: 23.0,
-                fontWeight: FontWeight.bold),
-          ),
-          const SizedBox(
-            height: 3.0,
-          ),
-          const Text(
-            'Create account to continue',
-            style: TextStyle(color: Colors.grey, fontSize: 16.0),
-          ),
-          rowAuthNetworkSocial(),
-          const SizedBox(
-            height: 24.0,
-          ),
-          formInputData(),
-          Container(
-            margin: const EdgeInsets.only(top: 16.0),
-            width: double.infinity,
-            height: 56.0,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10.0),
-              color: Colors.blue,
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.only(left: 16.0, top: 32.0, right: 16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              "Let's Go!",
+              style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 23.0,
+                  fontWeight: FontWeight.bold),
             ),
-            child: MaterialButton(
-              onPressed: () => controller.onSignUp(),
-              child: const Text(
-                'Sign Up',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 18.0,
-                  fontWeight: FontWeight.bold,
+            const SizedBox(
+              height: 3.0,
+            ),
+            const Text(
+              'Create account to continue',
+              style: TextStyle(color: Colors.grey, fontSize: 16.0),
+            ),
+            rowAuthNetworkSocial(),
+            const SizedBox(
+              height: 24.0,
+            ),
+            formInputData(),
+            Container(
+              margin: const EdgeInsets.only(top: 16.0),
+              width: double.infinity,
+              height: 56.0,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10.0),
+                color: Colors.blue,
+              ),
+              child: MaterialButton(
+                onPressed: () => controller.onSignUp(),
+                child: const Text(
+                  'Sign Up',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
-            ),
-          )
-        ],
+            )
+          ],
+        ),
       ),
     );
   }
