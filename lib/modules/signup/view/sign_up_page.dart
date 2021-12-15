@@ -1,4 +1,6 @@
+import 'package:fashion_app_ui/modules/signup/controller/signup_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 part 'sign_up_children.dart';
 

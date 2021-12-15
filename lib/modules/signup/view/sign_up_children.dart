@@ -2,6 +2,7 @@ part of 'sign_up_page.dart';
 
 extension SignUpChildren on SignUpPage {
   Widget signUpForm() {
+    final controller = Get.put(SignUpController());
     return Padding(
       padding: const EdgeInsets.only(left: 16.0, top: 32.0, right: 16.0),
       child: Column(
@@ -35,7 +36,7 @@ extension SignUpChildren on SignUpPage {
               color: Colors.blue,
             ),
             child: MaterialButton(
-              onPressed: () {},
+              onPressed: () => controller.onSignUp(),
               child: const Text(
                 'Sign Up',
                 style: TextStyle(

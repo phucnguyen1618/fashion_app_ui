@@ -1,8 +1,6 @@
-import 'package:fashion_app_ui/module/signup/view/sign_up_page.dart';
+import 'package:fashion_app_ui/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import 'home_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -15,7 +13,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const SignUpPage(),
+      initialRoute: Routes.SIGNUP,
+      getPages: routePages,
     );
   }
 }
