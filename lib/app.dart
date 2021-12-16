@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: Routes.SIGNUP,
+      initialRoute: Routes.HISTORY,
       getPages: routePages,
     );
   }
