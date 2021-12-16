@@ -1,5 +1,7 @@
+import 'package:fashion_app_ui/modules/home/controller/home_controller.dart';
 import 'package:fashion_app_ui/widgets/item_popular_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 part 'home_children.dart';
 

@@ -3,46 +3,22 @@ part of 'detail_page.dart';
 extension DetailChildren on DetailPage {
   Widget rowSize() {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 16.0, top: 16.0),
+      padding: const EdgeInsets.only(bottom: 16.0, top: 8.0),
       child: Row(
         children: const [
-          CircleAvatar(
-            backgroundColor: Colors.redAccent,
-            child: Text(
-              'S',
-              style: TextStyle(color: Colors.black, fontSize: 12.0),
-            ),
-          ),
+          ChooseSizeButtonWidget(size: 'S', isChoose: false),
           SizedBox(
-            width: 8.0,
+            width: 4.0,
           ),
-          CircleAvatar(
-            backgroundColor: Colors.white,
-            child: Text(
-              'M',
-              style: TextStyle(color: Colors.black, fontSize: 12.0),
-            ),
-          ),
+          ChooseSizeButtonWidget(size: 'M', isChoose: true),
           SizedBox(
-            width: 8.0,
+            width: 4.0,
           ),
-          CircleAvatar(
-            backgroundColor: Colors.white,
-            child: Text(
-              'L',
-              style: TextStyle(color: Colors.black, fontSize: 12.0),
-            ),
-          ),
+          ChooseSizeButtonWidget(size: 'L', isChoose: false),
           SizedBox(
-            width: 8.0,
+            width: 4.0,
           ),
-          CircleAvatar(
-            backgroundColor: Colors.white,
-            child: Text(
-              'XL',
-              style: TextStyle(color: Colors.black, fontSize: 12.0),
-            ),
-          ),
+          ChooseSizeButtonWidget(size: 'XL', isChoose: false),
         ],
       ),
     );
@@ -50,7 +26,7 @@ extension DetailChildren on DetailPage {
 
   Widget rowColor() {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 16.0, top: 16.0),
+      padding: const EdgeInsets.only(bottom: 16.0, top: 8.0),
       child: Row(
         children: [
           Container(
@@ -114,9 +90,7 @@ extension DetailChildren on DetailPage {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Row(
-            children: [],
-          ),
+          rowDisplayFavorites(),
           Container(
             decoration: const BoxDecoration(
               color: Colors.blue,
@@ -169,6 +143,85 @@ extension DetailChildren on DetailPage {
             height: 8.0,
           ),
           RoundedButtonWidget(iconData: Icons.remove, isChoose: false),
+        ],
+      ),
+    );
+  }
+
+  Widget rowDisplayFavorites() {
+    return SizedBox(
+      width: 200.0,
+      height: 56.0,
+      child: Stack(
+        alignment: Alignment.center,
+        children: const [
+          Positioned(
+              top: 0.0,
+              bottom: 0.0,
+              left: 0.0,
+              child: CircleAvatar(
+                backgroundColor: Colors.redAccent,
+                child: Text(
+                  'A',
+                  style: TextStyle(color: Colors.white),
+                ),
+              )),
+          Positioned(
+              top: 0.0,
+              bottom: 0.0,
+              left: 16.0,
+              child: CircleAvatar(
+                backgroundColor: Colors.blueAccent,
+                child: Text(
+                  'B',
+                  style: TextStyle(color: Colors.white),
+                ),
+              )),
+          Positioned(
+              top: 0.0,
+              bottom: 0.0,
+              left: 32.0,
+              child: CircleAvatar(
+                backgroundColor: Colors.orangeAccent,
+                child: Text(
+                  'C',
+                  style: TextStyle(color: Colors.white),
+                ),
+              )),
+          Positioned(
+              top: 0.0,
+              bottom: 0.0,
+              left: 48.0,
+              child: CircleAvatar(
+                backgroundColor: Colors.greenAccent,
+                child: Text(
+                  'D',
+                  style: TextStyle(color: Colors.white),
+                ),
+              )),
+          Positioned(
+            top: 0.0,
+            bottom: 0.0,
+            left: 64.0,
+            child: CircleAvatar(
+              backgroundColor: Colors.pinkAccent,
+              child: Text(
+                'E',
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+          ),
+          Positioned(
+            left: 112.0,
+            child: Text(
+              '155+ like',
+              style: TextStyle(
+                color: Colors.grey,
+                fontSize: 16.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
         ],
       ),
     );

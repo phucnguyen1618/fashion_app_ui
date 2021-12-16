@@ -1,3 +1,4 @@
+import 'package:fashion_app_ui/widgets/choose_size_button_widget.dart';
 import 'package:fashion_app_ui/widgets/rounded_button_widget.dart';
 import 'package:flutter/material.dart';
 

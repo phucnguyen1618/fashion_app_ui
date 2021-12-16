@@ -1,3 +1,5 @@
+import 'package:fashion_app_ui/modules/cart/cart_page.dart';
+import 'package:fashion_app_ui/modules/favorite/view/favorite_page.dart';
 import 'package:fashion_app_ui/modules/home/view/home_page.dart';
 import 'package:fashion_app_ui/modules/signup/view/sign_up_page.dart';
 import 'package:fashion_app_ui/modules/splash/view/splash_page.dart';
@@ -11,4 +13,6 @@ final routePages = [
   GetPage(name: Routes.SIGNUP, page: () => const SignUpPage()),
   GetPage(name: Routes.VERIFY, page: () => const VerifyPage()),
   GetPage(name: Routes.HOME, page: () => const HomePage()),
+  GetPage(name: Routes.FAVORITE, page: () => const FavoritePage()),
+  GetPage(name: Routes.CART, page: () => const CartPage()),
 ];

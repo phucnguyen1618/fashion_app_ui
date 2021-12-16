@@ -24,55 +24,60 @@ extension HomeChildren on HomePage {
   }
 
   Widget bottomNavigationMenu() {
-    return BottomNavigationBar(
-      backgroundColor: Colors.white,
-      items: const [
-        BottomNavigationBarItem(
-          title: SizedBox(),
-          icon: Icon(
-            Icons.home_outlined,
-            color: Colors.black,
+    final controller = Get.put(HomeController());
+    return Obx(() =>  BottomNavigationBar(
+        currentIndex: controller.currentIndex.value,
+        backgroundColor: Colors.white,
+        items: const [
+          BottomNavigationBarItem(
+            title: SizedBox(),
+            icon: Icon(
+              Icons.home_outlined,
+              color: Colors.grey,
+            ),
+            activeIcon: Icon(
+              Icons.home_outlined,
+              color: Colors.blue,
+            ),
           ),
-          activeIcon: Icon(
-            Icons.home_outlined,
-            color: Colors.blue,
+          BottomNavigationBarItem(
+            title: SizedBox(),
+            icon: Icon(
+              Icons.search,
+              color: Colors.grey,
+            ),
+            activeIcon: Icon(
+              Icons.search,
+              color: Colors.blue,
+            ),
           ),
-        ),
-        BottomNavigationBarItem(
-          title: SizedBox(),
-          icon: Icon(
-            Icons.search,
-            color: Colors.grey,
+          BottomNavigationBarItem(
+            title: SizedBox(),
+            icon: Icon(
+              Icons.favorite_border,
+              color: Colors.grey,
+            ),
+            activeIcon: Icon(
+              Icons.favorite_border,
+              color: Colors.blue,
+            ),
           ),
-          activeIcon: Icon(
-            Icons.search,
-            color: Colors.blue,
+          BottomNavigationBarItem(
+            title: SizedBox(),
+            icon: Icon(
+              Icons.shopping_bag_outlined,
+              color: Colors.grey,
+            ),
+            activeIcon: Icon(
+              Icons.shopping_bag_outlined,
+              color: Colors.blue,
+            ),
           ),
-        ),
-        BottomNavigationBarItem(
-          title: SizedBox(),
-          icon: Icon(
-            Icons.favorite_border,
-            color: Colors.grey,
-          ),
-          activeIcon: Icon(
-            Icons.favorite_border,
-            color: Colors.blue,
-          ),
-        ),
-        BottomNavigationBarItem(
-          title: SizedBox(),
-          icon: Icon(
-            Icons.shopping_bag_outlined,
-            color: Colors.grey,
-          ),
-          activeIcon: Icon(
-            Icons.shopping_bag_outlined,
-            color: Colors.blue,
-          ),
-        ),
-      ],
-      type: BottomNavigationBarType.fixed,
-    );
+        ],
+        type: BottomNavigationBarType.fixed,
+        onTap: (index){
+          controller.onItemBottomNavigationBarTap(index);
+        }
+    ));
   }
 }
