@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 
 class HomeController extends GetxController {
   var currentIndex = 0.obs;
+  var isIconMenuClicked = false.obs;
 
   void onItemBottomNavigationBarTap(int index) async {
     currentIndex.value = index;
@@ -26,5 +27,9 @@ class HomeController extends GetxController {
 
   void onAvatarProfileClicked() {
     Get.toNamed(Routes.PROFILE);
+  }
+
+  void onMenuAppClicked() {
+    isIconMenuClicked.value = !isIconMenuClicked.value;
   }
 }

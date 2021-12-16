@@ -1,6 +1,5 @@
 import 'package:fashion_app_ui/widgets/custom_number_button_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_utils/get_utils.dart';
 
 class ItemOrderWidget extends StatelessWidget {
   const ItemOrderWidget({Key? key}) : super(key: key);
@@ -15,14 +14,8 @@ class ItemOrderWidget extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(12.0),
-            child: SizedBox(
-              width: 80.0,
-              height: 80.0,
-              child: Image.asset(
-                'assets/images/image_03.jpeg',
-                fit: BoxFit.fill,
-              ),
-            ),
+            child: SizedBox(width: 80.0, height: 80.0,
+                child: Image.asset('assets/images/image_03.jpeg', fit: BoxFit.fill,),),
           ),
           const SizedBox(
             width: 12.0,
@@ -43,16 +36,13 @@ class ItemOrderWidget extends StatelessWidget {
                           fontSize: 16.0,
                           fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(
-                      height: 3.0,
-                    ),
+                    SizedBox(height: 3.0,),
                     Text(
                       'For Man',
                       style: TextStyle(
                         color: Colors.grey,
                         fontWeight: FontWeight.bold,
-                        fontSize: 12.0,
-                      ),
+                        fontSize: 12.0,),
                     ),
                   ],
                 ),
@@ -69,32 +59,16 @@ class ItemOrderWidget extends StatelessWidget {
                           fontSize: 16.0,
                           fontWeight: FontWeight.bold),
                     ),
-                    GetPlatform.isAndroid
-                        ? const SizedBox(
-                            width: 85.0,
-                          )
-                        : const SizedBox(
-                            width: 65.0,
-                          ),
+                    const SizedBox(width: 65.0,),
                     Padding(
                       padding: const EdgeInsets.only(right: 16.0),
                       child: Row(
                         children: const [
-                          CustomNumberButtonWidget(
-                              iconData: Icons.remove, isChoose: true),
-                          SizedBox(
-                            width: 4.0,
-                          ),
-                          Text(
-                            '02',
-                            style:
-                                TextStyle(color: Colors.black, fontSize: 16.0),
-                          ),
-                          SizedBox(
-                            width: 4.0,
-                          ),
-                          CustomNumberButtonWidget(
-                              iconData: Icons.add, isChoose: false),
+                          CustomNumberButtonWidget(iconData: Icons.remove, isChoose: true),
+                          SizedBox(width: 4.0,),
+                          Text('02', style: TextStyle(color: Colors.black, fontSize: 16.0),),
+                          SizedBox(width: 4.0,),
+                          CustomNumberButtonWidget(iconData: Icons.add, isChoose: false),
                         ],
                       ),
                     ),

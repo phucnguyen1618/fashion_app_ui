@@ -12,4 +12,5 @@ abstract class Routes {
   static const NOTIFICATION = '/notification';
   static const DETAIL = '/detail';
   static const ORDER_SUCCESS = '/order_success';
+  static const MENU_APP = '/menu_app';
 }
