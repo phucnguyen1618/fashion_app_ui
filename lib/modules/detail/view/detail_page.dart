@@ -25,7 +25,7 @@ class DetailPage extends StatelessWidget {
                   child: Image.asset(
                     'assets/images/image_02.jpg',
                     width: double.infinity,
-                    height: GetPlatform.isAndroid ? 380 : 460,
+                    height: GetPlatform.isAndroid ? 380 : 390,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -170,7 +170,9 @@ class DetailPage extends StatelessWidget {
                   ),
                 )),
             Positioned(
-              top: MediaQuery.of(context).size.height / 2 - 80,
+              top: GetPlatform.isAndroid
+                  ? MediaQuery.of(context).size.height / 2 - 80
+                  : MediaQuery.of(context).size.height / 2 - 100,
               right: 16.0,
               child: columnChooseNumber(),
             ),
