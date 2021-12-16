@@ -1,6 +1,8 @@
+import 'package:fashion_app_ui/modules/detail/controller/detail_controller.dart';
 import 'package:fashion_app_ui/widgets/choose_size_button_widget.dart';
 import 'package:fashion_app_ui/widgets/rounded_button_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 part 'detail_children.dart';
 
@@ -9,6 +11,7 @@ class DetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(DetailController());
     return Scaffold(
         backgroundColor: Colors.white,
         body: Stack(
@@ -22,7 +25,7 @@ class DetailPage extends StatelessWidget {
                   child: Image.asset(
                     'assets/images/image_02.jpg',
                     width: double.infinity,
-                    height: 360,
+                    height: 390,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -40,15 +43,18 @@ class DetailPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Container(
-                          padding: const EdgeInsets.all(8.0),
-                          decoration: const BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.blue,
-                          ),
-                          child: const Icon(
-                            Icons.arrow_back_ios,
-                            color: Colors.white,
+                        GestureDetector(
+                          onTap: () => controller.onBack(0),
+                          child: Container(
+                            padding: const EdgeInsets.all(8.0),
+                            decoration: const BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.blue,
+                            ),
+                            child: const Icon(
+                              Icons.arrow_back_ios,
+                              color: Colors.white,
+                            ),
                           ),
                         ),
                         Container(

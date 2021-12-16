@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:fashion_app_ui/routes/app_pages.dart';
 import 'package:get/get.dart';
 
@@ -9,6 +11,7 @@ class HomeController extends GetxController {
     switch (index) {
       case 0:
         currentIndex.value = await Get.toNamed(Routes.HOME);
+        log(currentIndex.value);
         break;
       case 1:
         return;

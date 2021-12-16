@@ -1,4 +1,4 @@
-import 'package:fashion_app_ui/modules/detail/detail_page.dart';
+import 'package:fashion_app_ui/modules/detail/view/detail_page.dart';
 import 'package:flutter/material.dart';
 
 class ItemPopularWidget extends StatelessWidget {

@@ -59,7 +59,7 @@ class ItemOrderWidget extends StatelessWidget {
                           fontSize: 16.0,
                           fontWeight: FontWeight.bold),
                     ),
-                    const SizedBox(width: 85.0,),
+                    const SizedBox(width: 65.0,),
                     Padding(
                       padding: const EdgeInsets.only(right: 16.0),
                       child: Row(

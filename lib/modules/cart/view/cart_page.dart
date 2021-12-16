@@ -91,7 +91,7 @@ class CartPage extends StatelessWidget {
           width: double.infinity,
           height: 56,
           child: MaterialButton(
-            onPressed: () {},
+            onPressed: () => controller.onCheckOut(),
             child: const Text(
               'CHECKOUT',
               style: TextStyle(

@@ -1,19 +1,25 @@
+import 'package:fashion_app_ui/modules/profile/controller/profile_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(ProfileController());
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.white,
         centerTitle: true,
-        leading: const Icon(
-          Icons.arrow_back_ios,
-          color: Colors.blue,
+        leading: IconButton(
+          onPressed: () => controller.onBack(),
+          icon: const Icon(
+            Icons.arrow_back_ios,
+            color: Colors.blue,
+          ),
         ),
         title: const Text(
           'Profile',

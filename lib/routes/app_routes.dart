@@ -10,4 +10,6 @@ abstract class Routes {
   static const PROFILE = '/profile';
   static const HISTORY = '/history';
   static const NOTIFICATION = '/notification';
+  static const DETAIL = '/detail';
+  static const ORDER_SUCCESS = '/order_success';
 }
