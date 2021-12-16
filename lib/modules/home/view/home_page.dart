@@ -10,6 +10,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(HomeController());
     return Scaffold(
       appBar: AppBar(
         elevation: 0.0,
@@ -18,11 +19,14 @@ class HomePage extends StatelessWidget {
           Icons.sort,
           color: Colors.black,
         ),
-        actions: const [
-          Padding(
-            padding: EdgeInsets.only(right: 16.0),
-            child: CircleAvatar(
-              child: Text('P'),
+        actions: [
+          GestureDetector(
+            onTap: () => controller.onAvatarProfileClicked(),
+            child: const Padding(
+              padding: EdgeInsets.only(right: 16.0),
+              child: CircleAvatar(
+                child: Text('P'),
+              ),
             ),
           ),
         ],

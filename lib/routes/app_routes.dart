@@ -7,4 +7,7 @@ abstract class Routes {
   static const HOME = '/home';
   static const FAVORITE = '/favorite';
   static const CART = '/cart';
+  static const PROFILE = '/profile';
+  static const HISTORY = '/history';
+  static const NOTIFICATION = '/notification';
 }

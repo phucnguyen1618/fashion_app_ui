@@ -20,4 +20,8 @@ class HomeController extends GetxController {
         break;
     }
   }
+
+  void onAvatarProfileClicked() {
+    Get.toNamed(Routes.PROFILE);
+  }
 }
