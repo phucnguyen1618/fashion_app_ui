@@ -1,4 +1,7 @@
+import 'package:fashion_app_ui/modules/history/controller/history_page_controller.dart';
+import 'package:fashion_app_ui/widgets/item_history_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 part 'history_page_children.dart';
 
@@ -7,7 +10,9 @@ class HistoryPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(HistoryController());
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.white,
@@ -26,9 +31,12 @@ class HistoryPage extends StatelessWidget {
         children: [
           rowHeaderTotalSpent(),
           Expanded(
-            child: ListView.builder(itemBuilder: (context, index){
-              return const SizedBox();
-            }),
+            child: ListView.builder(
+                shrinkWrap: true,
+                itemCount: 5,
+                itemBuilder: (context, index) {
+                  return const ItemHistoryWidget();
+                }),
           ),
         ],
       ),
